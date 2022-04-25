@@ -256,6 +256,48 @@ var k3 = 0;
 var k4 = 0;
 var k5 = 0;
 
+let cartNotificationIconOpen = false;
+let favoritesNotificationIconOpen = false;
+let favoritesNotificationDescriptionOpen = false;
+
+function cartNotificationIcon() {
+	cartNotificationIconOpen = !cartNotificationIconOpen;
+	if (cartNotificationIconOpen) {
+		document.getElementById('cartNotificationIcon').style.display = 'flex';
+	} else {
+		setTimeout(() => {
+			document.getElementById('cartNotificationIcon').style.display = 'none';
+		}, 200);
+	}
+}
+
+function favoritesNotificationIcon() {
+	favoritesNotificationIconOpen = !favoritesNotificationIconOpen;
+	if (favoritesNotificationIconOpen) {
+		document.getElementById('favoritesNotificationIcon').style.display = 'flex';
+	} else {
+		setTimeout(() => {
+			document.getElementById('favoritesNotificationIcon').style.display = 'none';
+		}, 200);
+	}
+}
+
+function favoritesNotificationDescription() {
+	favoritesNotificationDescriptionOpen = !favoritesNotificationDescriptionOpen;
+	if (favoritesNotificationDescriptionOpen) {
+		document.getElementById('favoritesNotificationDescription').style.display = 'flex';
+	} else {
+		setTimeout(() => {
+			document.getElementById('favoritesNotificationDescription').style.display = 'none';
+		}, 200);
+	}
+}
+
+function favoritesNotification() {
+	favoritesNotificationIcon();
+	favoritesNotificationDescription();
+}
+
 document.getElementById('topsellersFavorites0').addEventListener('click', function () {
 	q0 = q0 < color.length ? ++q0 : 0;
 
@@ -375,6 +417,86 @@ function firstDropDown() {
 		}, 200);
 	}
 }
+
+var form = document.getElementById('form');
+
+async function handleSubmit(event) {
+	event.preventDefault();
+	var status = document.getElementById('status');
+	var data = new FormData(event.target);
+	fetch(event.target.action, {
+		method: form.method,
+		body: data,
+		headers: {
+			Accept: 'application/json',
+		},
+	})
+		.then((response) => {
+			if (response.ok) {
+				status.classList.add('success');
+				status.innerHTML =
+					'Thank you for your message. I will get in touch with you as soon as possible. ';
+				form.reset();
+			} else {
+				response.json().then((data) => {
+					if (Object.hasOwn(data, 'errors')) {
+						status.innerHTML = data['errors'].map((error) => error['message']).join(', ');
+					} else {
+						status.classList.add('error');
+						status.innerHTML =
+							'Sorry, this form is currently being updated, please use the other contact forms to the left of this form to get in contact with me.';
+					}
+				});
+			}
+		})
+		.catch((error) => {
+			status.classList.add('error');
+			status.innerHTML =
+				'This form is currently being updated, please use the other contact forms to the left of this form.';
+		});
+}
+form.addEventListener('submit', handleSubmit);
+
+const contactFormName = document.getElementById('name');
+const contactFormEmail = document.getElementById('email');
+const contactFormSubject = document.getElementById('subject');
+const contactFormMessage = document.getElementById('message');
+const nameCheck = document.getElementById('nameCheck');
+const nameCross = document.getElementById('nameCross');
+const emailCheck = document.getElementById('emailCheck');
+const emailCross = document.getElementById('emailCross');
+const subjectCheck = document.getElementById('subjectCheck');
+const subjectCross = document.getElementById('subjectCross');
+const messageCheck = document.getElementById('messageCheck');
+const messageCross = document.getElementById('messageCross');
+
+contactFormName.addEventListener('click', () => {
+	nameCheck.classList.add('fa-solid');
+	nameCheck.classList.add('fa-check');
+	nameCross.classList.add('fa-solid');
+	nameCross.classList.add('fa-xmark');
+});
+
+contactFormEmail.addEventListener('click', () => {
+	emailCheck.classList.add('fa-check');
+	emailCheck.classList.add('fa-solid');
+	emailCross.classList.add('fa-solid');
+	emailCross.classList.add('fa-xmark');
+});
+
+contactFormSubject.addEventListener('click', () => {
+	subjectCheck.classList.add('fa-solid');
+	subjectCheck.classList.add('fa-check');
+	subjectCross.classList.add('fa-solid');
+	subjectCross.classList.add('fa-xmark');
+});
+
+contactFormMessage.addEventListener('click', () => {
+	messageCheck.classList.add('fa-solid');
+	messageCheck.classList.add('fa-check');
+	messageCross.classList.add('fa-solid');
+	messageCross.classList.add('fa-xmark');
+});
 
 /* 
 
