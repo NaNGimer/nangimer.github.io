@@ -437,6 +437,22 @@ async function handleSubmit(event) {
 				status.innerHTML =
 					'Thank you for your message. I will get in touch with you as soon as possible. ';
 				form.reset();
+				nameCheck.classList.remove('fa-solid');
+				nameCheck.classList.remove('fa-check');
+				nameCross.classList.remove('fa-solid');
+				nameCross.classList.remove('fa-xmark');
+				emailCheck.classList.remove('fa-check');
+				emailCheck.classList.remove('fa-solid');
+				emailCross.classList.remove('fa-solid');
+				emailCross.classList.remove('fa-xmark');
+				subjectCheck.classList.remove('fa-solid');
+				subjectCheck.classList.remove('fa-check');
+				subjectCross.classList.remove('fa-solid');
+				subjectCross.classList.remove('fa-xmark');
+				messageCheck.classList.remove('fa-solid');
+				messageCheck.classList.remove('fa-check');
+				messageCross.classList.remove('fa-solid');
+				messageCross.classList.remove('fa-xmark');
 			} else {
 				response.json().then((data) => {
 					if (Object.hasOwn(data, 'errors')) {
