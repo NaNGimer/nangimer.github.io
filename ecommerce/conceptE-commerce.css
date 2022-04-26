@@ -103,6 +103,37 @@ input:focus {
 	}
 }
 
+@keyframes right {
+	from {
+		transform: translateX(1720px);
+	}
+	to {
+		transform: translateX(0px);
+	}
+}
+
+@keyframes left {
+	from {
+		transform: translateX(-1720px);
+	}
+	to {
+		transform: translateX(0px);
+	}
+}
+
+@keyframes down {
+	from {
+		position: relative;
+		z-index: -90000;
+		transform: translateY(600px);
+	}
+	to {
+		transform: translateY(0px);
+
+		z-index: 1;
+	}
+}
+
 /* HEADER MENU */
 
 /* COINTAINER */
@@ -262,20 +293,21 @@ header {
 	color: var(--grisplus);
 }
 
-.navMenuList li {
-	transition: all 400ms ease;
-}
-
-.navMenuList.entryOverlay li {
+.navMenuList.overlay li {
 	opacity: 0;
 	pointer-events: none;
-	transform: scale(0.8);
 }
 
-.navMenuList.hideOverlay,
+.navMenuList.hideOverlay {
+	opacity: 0;
+	pointer-events: none;
+	transition: all 400ms ease-in-out;
+}
+
 .navSearchContainer.hideOverlay {
 	opacity: 0;
 	pointer-events: none;
+	transition: none;
 }
 
 .overlay {
@@ -398,6 +430,12 @@ header {
 	font-size: 43.5px;
 	cursor: pointer;
 	margin: auto 10px;
+}
+
+.navCategoriesDescription:hover,
+#navCategoriesOut:hover {
+	color: var(--negrogris);
+	transition: all 280ms;
 }
 
 .navCategoriesContentHeader {
@@ -743,7 +781,7 @@ main {
 }
 
 .topsellersDisplaySectionActiveOn:hover {
-	box-shadow: 0px 0px 6.5px 0.1px var(--gris);
+	box-shadow: 0px 0px 5px 0.1px var(--gris);
 }
 
 .topsellersDisplaySectionActiveOn:nth-child(2n) {
@@ -927,6 +965,16 @@ main {
 	transition: 0.8s;
 }
 
+.right {
+	animation-name: right;
+	animation-duration: 0.3s;
+}
+
+.left {
+	animation-name: left;
+	animation-duration: 0.3s;
+}
+
 /*Footer*/
 
 footer {
@@ -969,9 +1017,12 @@ footer {
 #firstContainer {
 	display: none;
 	flex-direction: row;
-	transform-origin: center top;
-	height: 0px;
 	width: 100%;
+}
+
+.down {
+	animation-name: down;
+	animation-duration: 0.4s;
 }
 
 .firstContainerBox,
@@ -1008,7 +1059,6 @@ footer {
 
 .firstContainerBox:nth-child(2n) {
 	background-color: #fff;
-	box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
 }
 
 .container {
@@ -1104,7 +1154,7 @@ footer {
 }
 
 .btn {
-	margin-top: 20px;
+	margin-top: 17px;
 	background: 0 0 #fff;
 	border: 1px solid #aaa;
 	border-radius: 3px;
@@ -1130,7 +1180,7 @@ footer {
 	display: flex;
 	justify-content: center;
 	margin-top: 18px;
-	font-size: 16px;
+	font-size: 18px;
 	font-weight: 500;
 	text-align: center;
 }

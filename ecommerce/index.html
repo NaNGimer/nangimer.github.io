@@ -260,14 +260,12 @@
 
 
 
-
-
     <main>
 
         <div class="mainBounds">
 
-            <ul class="carousel">
-                <li class="carouselSlider" onmouseenter="pauseSlides()" onmouseleave="startSlides()">
+            <ul class="carousel" onmouseenter="pauseSlides()" onmouseleave="startSlides()">
+                <li class="carouselSlider">
                     <a href="#" class="carouselSliderGroup">
                         <img alt="SOUND 4D" src="carousel\Carousel B.jpg"></img>
                         <div class="carouselSliderGroupDescriptionMargin">
@@ -290,13 +288,13 @@
                         </div>
                     </a>
                 </li>
-                <li class="carouselButton" onmouseenter="pauseSlides()">
+                <li class="carouselButton">
                     <button href="#" class="carouselButtonRight" onclick="carouselButtonOn(0)">
                         > </button>
                     <button href="#" class="carouselButtonLeft" onclick="carouselButtonOn(-2)">
                         < </button>
                 </li>
-                <li class="carouselBar" onmouseenter="pauseSlides()">
+                <li class="carouselBar">
                     <span class="carouselBarIn active" onclick="carouselBarOn(0)"></span>
                     <span class="carouselBarIn" onclick="carouselBarOn(1)"></span>
                     <span class="carouselBarIn" onclick="carouselBarOn(2)"></span>
@@ -368,7 +366,7 @@
                     </a>
                     <ul class="topsellersDisplay">
                         <li class="topsellersDisplaySection">
-                            <ul class="topsellersDisplaySectionActive">
+                            <ul class="topsellersDisplaySectionActive" id="topsellersDisplaySectionActive1">
                                 <li class="topsellersDisplaySectionActiveOn">
                                     <div class="topsellersDisplaySectionLinkImageFavorite">
                                         <button class="material-icons-outlined" id="topsellersFavorites0"
@@ -438,7 +436,7 @@
                                 </li>
 
                             </ul>
-                            <ul class="topsellersDisplaySectionActive">
+                            <ul class="topsellersDisplaySectionActive" id="topsellersDisplaySectionActive2">
                                 <li class="topsellersDisplaySectionActiveOn">
                                     <div class="topsellersDisplaySectionLinkImageFavorite">
                                         <button class="material-icons-outlined" id="topsellersFavorites2"
@@ -506,7 +504,7 @@
                                 </li>
 
                             </ul>
-                            <ul class="topsellersDisplaySectionActive">
+                            <ul class="topsellersDisplaySectionActive" id="topsellersDisplaySectionActive3">
                                 <li class="topsellersDisplaySectionActiveOn">
                                     <div class="topsellersDisplaySectionLinkImageFavorite">
                                         <button class="material-icons-outlined" id="topsellersFavorites4"
@@ -575,11 +573,11 @@
                             </ul>
                         </li>
                         <li class="topsellersDisplayButton">
-                            <button href="#" class="topsellersDisplayButtonRight"
-                                onclick="topsellersDisplayButtonOn(0)">
+                            <button href="#" class="topsellersDisplayButtonRight" onclick="topsellersDisplayButtonOn(0)"
+                                id="topsellersButtonRight">
                                 > </button>
-                            <button href="#" class="topsellersDisplayButtonLeft"
-                                onclick="topsellersDisplayButtonOn(-2)">
+                            <button href="#" class="topsellersDisplayButtonLeft" onclick="topsellersDisplayButtonOn(-2)"
+                                id="topsellersButtonLeft">
                                 < </button>
                         </li>
 
@@ -599,7 +597,7 @@
 
         <div class="footerBounds">
 
-            <div class="sidenavRowDropdownContainer">
+            <div class="sidenavRowDropdownContainer" id="sidenavRowDropdownContainer">
                 <div class="sidenavRowDropdown" id="firstDropDown" onclick="firstDropDown()">
                     <div>Contact</div>
                     <i class="arrowVerticalIcon"></i>
@@ -678,7 +676,7 @@
                 </div>
             </div>
 
-            <div class="containerOtherProjects">
+            <div class="containerOtherProjects" id="containerOtherProjects">
                 <div class="otherProjects">
                     <a href="#">
                         <i class="fa-solid fa-address-card"></i>

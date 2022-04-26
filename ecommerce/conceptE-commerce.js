@@ -238,6 +238,24 @@ function nextSlide2() {
 	slide2Index++;
 }
 
+document.getElementById('topsellersButtonRight').addEventListener('click', () => {
+	document.getElementById('topsellersDisplaySectionActive1').classList.add('right');
+	document.getElementById('topsellersDisplaySectionActive2').classList.add('right');
+	document.getElementById('topsellersDisplaySectionActive3').classList.add('right');
+	document.getElementById('topsellersDisplaySectionActive1').classList.remove('left');
+	document.getElementById('topsellersDisplaySectionActive2').classList.remove('left');
+	document.getElementById('topsellersDisplaySectionActive3').classList.remove('left');
+});
+
+document.getElementById('topsellersButtonLeft').addEventListener('click', () => {
+	document.getElementById('topsellersDisplaySectionActive1').classList.add('left');
+	document.getElementById('topsellersDisplaySectionActive2').classList.add('left');
+	document.getElementById('topsellersDisplaySectionActive3').classList.add('left');
+	document.getElementById('topsellersDisplaySectionActive1').classList.remove('right');
+	document.getElementById('topsellersDisplaySectionActive2').classList.remove('right');
+	document.getElementById('topsellersDisplaySectionActive3').classList.remove('right');
+});
+
 /* FAVORITES/Shopping BUTTON */
 
 var color = ['#ffffff', '#ffffff', '#d50b0f'];
@@ -406,8 +424,12 @@ function firstDropDown() {
 	if (firstDropDownOpen) {
 		document.querySelector('#firstDropDown i').setAttribute('class', 'arrowVerticalIconDown');
 		document.getElementById('firstContainer').style.display = 'flex';
+		document.getElementById('firstContainer').classList.add('down');
 		document.getElementById('firstContainer').style.height = '600px';
+
+		document.getElementById('firstContainer').style.transition = 'all 1s';
 	} else {
+		document.getElementById('firstContainer').classList.remove('down');
 		document.querySelector('#firstDropDown i').setAttribute('class', 'arrowVerticalIcon');
 
 		document.getElementById('firstContainer').style.height = '0px';
