@@ -422,16 +422,19 @@ let firstDropDownOpen = false;
 function firstDropDown() {
 	firstDropDownOpen = !firstDropDownOpen;
 	if (firstDropDownOpen) {
-		document.querySelector('#firstDropDown i').setAttribute('class', 'arrowVerticalIconDown');
+		document.querySelector('#firstDropDown i').setAttribute('class', 'arrowVerticalIcon');
+		document.getElementById('arrowVerticalIconDown').classList.add('rotateUp');
 		document.getElementById('firstContainer').style.display = 'flex';
 		document.getElementById('firstContainer').classList.add('down');
 		document.getElementById('firstContainer').style.height = '600px';
 
 		document.getElementById('firstContainer').style.transition = 'all 1s';
 	} else {
-		document.getElementById('firstContainer').classList.remove('down');
-		document.querySelector('#firstDropDown i').setAttribute('class', 'arrowVerticalIcon');
+		document.querySelector('#firstDropDown i').setAttribute('class', 'arrowVerticalIconDown');
+		document.getElementById('arrowVerticalIconDown').classList.remove('rotateUp');
 
+		document.getElementById('arrowVerticalIconDown').classList.add('rotateDown');
+		document.getElementById('firstContainer').classList.remove('down');
 		document.getElementById('firstContainer').style.height = '0px';
 		document.getElementById('firstContainer').style.transition = 'height 0.3s';
 		setTimeout(() => {

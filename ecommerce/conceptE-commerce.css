@@ -125,12 +125,30 @@ input:focus {
 	from {
 		position: relative;
 		z-index: -90000;
-		transform: translateY(600px);
+		transform: translateY(-600px);
 	}
 	to {
 		transform: translateY(0px);
 
 		z-index: 1;
+	}
+}
+
+@keyframes rotateUp {
+	from {
+		transform: rotate(180deg);
+	}
+	to {
+		transform: rotate(0deg);
+	}
+}
+
+@keyframes rotateDown {
+	from {
+		transform: rotate(180deg);
+	}
+	to {
+		transform: rotate(0deg);
 	}
 }
 
@@ -1015,6 +1033,16 @@ footer {
 	margin-left: 0;
 }
 
+.rotateUp {
+	animation-name: rotateUp;
+	animation-duration: 0.6s;
+}
+
+.rotateDown {
+	animation-name: rotateDown;
+	animation-duration: 0.6s;
+}
+
 #firstContainer {
 	display: none;
 	flex-direction: row;
@@ -1023,7 +1051,7 @@ footer {
 
 .down {
 	animation-name: down;
-	animation-duration: 0.4s;
+	animation-duration: 0.6s;
 }
 
 .firstContainerBox,
