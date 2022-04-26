@@ -301,7 +301,8 @@ header {
 .navMenuList.hideOverlay {
 	opacity: 0;
 	pointer-events: none;
-	transition: all 400ms ease-in-out;
+	transition: all 300ms ease-in;
+	transform: scale(0.8);
 }
 
 .navSearchContainer.hideOverlay {
