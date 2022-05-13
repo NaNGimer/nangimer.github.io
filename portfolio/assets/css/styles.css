@@ -1500,7 +1500,8 @@ svg {
 	/*==================== PORTFOLIO ====================*/
 
 	.portfolio {
-		margin-top: 1rem;
+		margin: 1rem auto;
+		max-width: 1320px;
 		margin-bottom: 4.5rem;
 	}
 
