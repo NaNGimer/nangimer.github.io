@@ -23,7 +23,7 @@
     <!--==================== HEADER ====================-->
     <header class="header" id="header">
         <nav class="nav container">
-            <a href="#" class="nav__logo">Nahuel Gimer</a>
+            <a href="#" class="nav__logo" id="nav__logo">Nahuel Gimer</a>
             <div class="nav__menu-mobile" id="nav__menu-mobile">
                 <ul class="nav__list grid">
                     <li class="nav__item">
@@ -33,9 +33,9 @@
                         </a>
                     </li>
                     <li class="nav__item">
-                        <a href="#about" class="nav__link" id="nav__link__about-mobile">
-                            <i class="uil uil-user nav__icon"></i>
-                            <span id="about-lg-mobile">About</span>
+                        <a href="#portfolio" class="nav__link" id="nav__link__portfolio-mobile">
+                            <i class="uil uil-scenery nav__icon"></i>
+                            <span id="portfolio-lg-mobile">Portfolio</span>
                         </a>
                     </li>
                     <li class="nav__item">
@@ -44,16 +44,16 @@
                             <span id="skills-lg-mobile">Skills</span>
                         </a>
                     </li>
-                    <li class="nav__item">
-                        <a href="#portfolio" class="nav__link" id="nav__link__portfolio-mobile">
-                            <i class="uil uil-scenery nav__icon"></i>
-                            <span id="portfolio-lg-mobile">Portfolio</span>
-                        </a>
-                    </li>
-                    <li class="nav__item">
+                    <!--<li class="nav__item">
                         <a href="#services" class="nav__link" id="nav__link__services-mobile">
                             <i class="uil uil-briefcase-alt nav__icon"></i>
                             <span id="services-lg-mobile">Services</span>
+                        </a>
+                    </li>-->
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link" id="nav__link__about-mobile">
+                            <i class="uil uil-user nav__icon"></i>
+                            <span id="about-lg-mobile">About</span>
                         </a>
                     </li>
                     <li class="nav__item">
@@ -66,23 +66,12 @@
             </div>
 
             <div class="nav__menu-desk" id="nav__menu-desk">
+                <a href="#" class="nav__logo">Nahuel Gimer</a>
                 <ul class="nav__list grid">
                     <li class="nav__item">
                         <a href="#home" class="nav__link active-link">
                             <i class="uil uil-estate nav__icon"></i>
                             <span id="home-lg-desk">Home</span>
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#about" class="nav__link">
-                            <i class="uil uil-user nav__icon"></i>
-                            <span id="about-lg-desk">About</span>
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#skills" class="nav__link">
-                            <i class="uil uil-file alt nav__icon"></i>
-                            <span id="skills-lg-desk">Skills</span>
                         </a>
                     </li>
                     <li class="nav__item">
@@ -92,9 +81,22 @@
                         </a>
                     </li>
                     <li class="nav__item">
+                        <a href="#skills" class="nav__link">
+                            <i class="uil uil-file alt nav__icon"></i>
+                            <span id="skills-lg-desk">Skills</span>
+                        </a>
+                    </li>
+
+                    <!--<li class="nav__item">
                         <a href="#services" class="nav__link">
                             <i class="uil uil-briefcase-alt nav__icon"></i>
                             <span id="services-lg-desk">Services</span>
+                        </a>
+                    </li>-->
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">
+                            <i class="uil uil-user nav__icon"></i>
+                            <span id="about-lg-desk">About</span>
                         </a>
                     </li>
                     <li class="nav__item">
@@ -103,27 +105,30 @@
                             <span id="contact-lg-desk">Contact Me</span>
                         </a>
                     </li>
+
+
                 </ul>
             </div>
 
-            </div>
-
-            <div class="nav__btns">
+            <ul class="nav__btns">
 
                 <!--==================== LANGUAGE BUTTON ====================-->
-                <div class="nav__language" onclick="navLanguage()">
+                <li class="nav__language" onclick="navLanguage()">
                     <i class="fa-solid fa-e" id="nav__language_letter-static"></i>
                     <i class="fa-solid fa-n" id="nav__language_letter-changer"></i>
-                </div>
+                </li>
 
                 <!--==================== THEME CHANGE BUTTON ====================-->
                 <i class="uil uil-sun change-theme" id="theme-button" onclick="navTheme()"></i>
 
                 <!--==================== NAV BUTTON ====================-->
-                <div class="nav__toggle" id="nav__toggle" onclick="navToggle()">
+                <li class="nav__toggle" id="nav__toggle" onclick="navToggle()">
                     <i class="uil uil-apps" id="nav-toggle"></i>
-                </div>
+                </li>
+            </ul>
+
             </div>
+
         </nav>
     </header>
 
@@ -164,11 +169,11 @@
                     <div class="home__data">
                         <h1 class="home__title">Nahuel Gimer</h1>
                         <h3 class="home__subtitle" id="home__subtitle-lg">Front End Developer, UX/UI</h3>
-                        <p class="home__description" id="home__description-lg1">Focused in learn the impression
+                        <!--<p class="home__description" id="home__description-lg1">Focused in learn the impression
                         </p>
                         <p class="home__description" id="home__description-lg2">of the client inside the
                             web,</p>
-                        <p class="home__description" id="home__description-lg3">to enhance their user experience.</p>
+                        <p class="home__description" id="home__description-lg3">to enhance their user experience.</p>-->
                         <!--<a href="#contact" class="button button--flex"> Contact Me
                             <i class="uil uil-message button__icon"></i>
                         </a>-->
@@ -184,33 +189,128 @@
             </div>
         </section>
 
-        <!--==================== ABOUT ====================-->
 
-        <section class="about section" id="about">
-            <h2 class="section__title" id="section__title__about-lg">About Me</h2>
+        <!--==================== PORTFOLIO ====================-->
+        <section class="portfolio section" id="portfolio">
+            <h2 class="section__title" id="section__title__portfolio-lg">Portfolio</h2>
+            <!--<span class="section__subtitle" id="section__subtitle__portfolio-lg">Recent work</span>-->
 
-            <div class="about__container container grid">
-                <!-- <img src="assets/img/about.jpg" alt="" class="about__img"> -->
-                <div class="about__data">
-                    <p class="about__description" id="about__description-lg">A crack</p>
-                    <div class="about__info">
-                        <!--
-                        <div>
-                            <span class="about__info-title"></span>
-                            <span class="about__info-title"><br></span>
+
+
+            <!--==================== PORTFOLIO ENGLISH ====================-->
+            <div class="portfolio__container container swiper show-pf" id="portfolio__container-lg-en">
+                <div class="swiper-wrapper">
+                    <!--==================== PORTFOLIO FIRST PROJECT ====================-->
+                    <div class="portfolio__content swiper-slide">
+                        <img src="assets/img/portfolio1.jpg" alt="" class="portfolio__img">
+
+                        <div class="portfolio__data">
+                            <h3 class="portfolio__title">E-Commerce</h3>
+                            <p class="portfolio__description">Is a E-Commerce</p>
+                            <a href="#" class="button button--flex button--small portfolio__button">Demo
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
                         </div>
-                        -->
-                        <div class="about__buttons">
-                            <a download="" href="assets/pdf/Alexa-Cv.pdf" class="button button--flex">
-                                <span id="about__buttons-lg1">Download</span>
-                                <span>CV</span>
-                                <i class="uil uil-arrow-down button__icon"></i>
-                                <!--<i class="uil uil-download-alt button__icon"></i>-->
+                    </div>
+                    <!--==================== PORTFOLIO SECOND PROJECT ====================-->
+                    <div class="portfolio__content swiper-slide">
+                        <img src="assets/img/portfolio2.jpg" alt="" class="portfolio__img">
+
+                        <div class="portfolio__data">
+                            <h3 class="portfolio__title">S-Commerce</h3>
+                            <p class="portfolio__description">Is a
+                                G-Commerce
+                            </p>
+                            <a href="#" class="button button--flex button--small portfolio__button">Demo
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!--==================== PORTFOLIO THIRD PROJECT ====================-->
+                    <div class="portfolio__content swiper-slide">
+                        <img src="assets/img/portfolio3.jpg" alt="" class="portfolio__img">
+
+                        <div class="portfolio__data">
+                            <h3 class="portfolio__title">Y-Commerce</h3>
+                            <p class="portfolio__description">Is a H-Commerce</p>
+                            <a href="#" class="button button--flex button--small portfolio__button">Demo
+                                <i class="uil uil-arrow-right button__icon"></i>
                             </a>
                         </div>
                     </div>
                 </div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next">
+                    <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+                </div>
+                <div class="swiper-button-prev">
+                    <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+                </div>
+
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+
+            </div>
+
+            <!--==================== PORTFOLIO SPANISH ====================-->
+            <div class="portfolio__container container swiper" id="portfolio__container-lg-es">
+                <div class="swiper-wrapper">
+                    <!--==================== PORTFOLIO FIRST PROJECT ====================-->
+                    <div class="portfolio__content swiper-slide">
+                        <img src="assets/img/portfolio1.jpg" alt="" class="portfolio__img">
+
+                        <div class="portfolio__data">
+                            <h3 class="portfolio__title">E-Commerce</h3>
+                            <p class="portfolio__description">Es un E-Commerce</p>
+                            <a href="#" class="button button--flex button--small portfolio__button">
+                                <span>Ver</span>
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!--==================== PORTFOLIO SECOND PROJECT ====================-->
+                    <div class="portfolio__content swiper-slide">
+                        <img src="assets/img/portfolio2.jpg" alt="" class="portfolio__img">
+
+                        <div class="portfolio__data">
+                            <h3 class="portfolio__title">S-Commerce</h3>
+                            <p class="portfolio__description">Es un
+                                G-Commerce
+                            </p>
+                            <a href="#" class="button button--flex button--small portfolio__button">Ver
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!--==================== PORTFOLIO THIRD PROJECT ====================-->
+                    <div class="portfolio__content swiper-slide">
+                        <img src="assets/img/portfolio3.jpg" alt="" class="portfolio__img">
+
+                        <div class="portfolio__data">
+                            <h3 class="portfolio__title">Y-Commerce</h3>
+                            <p class="portfolio__description">Es un H-Commerce</p>
+                            <a href="#" class="button button--flex button--small portfolio__button">Ver
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add Arrows -->
+                <div class="swiper-button-next">
+                    <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+                </div>
+                <div class="swiper-button-prev">
+                    <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+                </div>
+
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+
+            </div>
+
         </section>
+
 
         <!--==================== SKILLS ====================-->
 
@@ -266,6 +366,7 @@
                                     <span class="skills__percentage skills__react"></span>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                     <!--==================== SKILLS BACK END ====================-->
@@ -352,252 +453,50 @@
             </div>
         </section>
 
+
+        <!--==================== ABOUT ====================-->
+
+        <section class="about section" id="about">
+            <h2 class="section__title" id="section__title__about-lg">About Me</h2>
+
+            <div class="about__container container grid">
+                <!-- <img src="assets/img/about.jpg" alt="" class="about__img"> -->
+                <div class="about__data">
+                    <!-- <p class="about__description" id="about__description-lg"></p> -->
+                    <div class="about__info">
+                        <!--
+                        <div>
+                            <span class="about__info-title"></span>
+                            <span class="about__info-title"><br></span>
+                        </div>
+                        -->
+                        <div class="about__buttons">
+                            <a download="" href="assets/pdf/Alexa-Cv.pdf" class="button button--flex">
+                                <span id="about__buttons-lg1">Download</span>
+                                <span>CV</span>
+                                <i class="uil uil-arrow-down button__icon"></i>
+                                <!--<i class="uil uil-download-alt button__icon"></i>-->
+                            </a>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+
         <!--==================== QUALIFICATION ====================-->
         <!--<section class="qualification section">
 
         </section>-->
 
 
-        <!--==================== PORTFOLIO ====================-->
-        <section class="portfolio section" id="portfolio">
-            <h2 class="section__title" id="section__title__portfolio-lg">Portfolio</h2>
-            <span class="section__subtitle" id="section__subtitle__portfolio-lg">Recent work</span>
 
-
-
-            <!--==================== PORTFOLIO ENGLISH ====================-->
-            <div class="portfolio__container container swiper show-pf" id="portfolio__container-lg-en">
-                <div class="swiper-wrapper">
-                    <!--==================== PORTFOLIO FIRST PROJECT ====================-->
-                    <div class="portfolio__content swiper-slide">
-                        <img src="assets/img/portfolio1.jpg" alt="" class="portfolio__img">
-
-                        <div class="portfolio__data">
-                            <h3 class="portfolio__title">E-Commerce</h3>
-                            <p class="portfolio__description">Is a E-Commerce</p>
-                            <a href="#" class="button button--flex button--small portfolio__button">Demo
-                                <i class="uil uil-arrow-right button__icon"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <!--==================== PORTFOLIO SECOND PROJECT ====================-->
-                    <div class="portfolio__content swiper-slide">
-                        <img src="assets/img/portfolio2.jpg" alt="" class="portfolio__img">
-
-                        <div class="portfolio__data">
-                            <h3 class="portfolio__title">S-Commerce</h3>
-                            <p class="portfolio__description">Is a
-                                G-Commerce
-                            </p>
-                            <a href="#" class="button button--flex button--small portfolio__button">Demo
-                                <i class="uil uil-arrow-right button__icon"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <!--==================== PORTFOLIO THIRD PROJECT ====================-->
-                    <div class="portfolio__content swiper-slide">
-                        <img src="assets/img/portfolio3.jpg" alt="" class="portfolio__img">
-
-                        <div class="portfolio__data">
-                            <h3 class="portfolio__title">Y-Commerce</h3>
-                            <p class="portfolio__description">Is a H-Commerce</p>
-                            <a href="#" class="button button--flex button--small portfolio__button">Demo
-                                <i class="uil uil-arrow-right button__icon"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Add Arrows -->
-                <div class="swiper-button-next">
-                    <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
-                </div>
-                <div class="swiper-button-prev">
-                    <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
-                </div>
-
-                <!-- Add Pagination -->
-                <div class="swiper-pagination"></div>
-
-            </div>
-
-            <!--==================== PORTFOLIO SPANISH ====================-->
-            <div class="portfolio__container container swiper" id="portfolio__container-lg-es">
-                <div class="swiper-wrapper">
-                    <!--==================== PORTFOLIO FIRST PROJECT ====================-->
-                    <div class="portfolio__content swiper-slide">
-                        <img src="assets/img/portfolio1.jpg" alt="" class="portfolio__img">
-
-                        <div class="portfolio__data">
-                            <h3 class="portfolio__title">E-Commerce</h3>
-                            <p class="portfolio__description" id="portfolio__description-lg">Es un E-Commerce</p>
-                            <a href="#" class="button button--flex button--small portfolio__button">
-                                <span>Ver</span>
-                                <i class="uil uil-arrow-right button__icon"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <!--==================== PORTFOLIO SECOND PROJECT ====================-->
-                    <div class="portfolio__content swiper-slide">
-                        <img src="assets/img/portfolio2.jpg" alt="" class="portfolio__img">
-
-                        <div class="portfolio__data">
-                            <h3 class="portfolio__title">S-Commerce</h3>
-                            <p class="portfolio__description">Es un
-                                G-Commerce
-                            </p>
-                            <a href="#" class="button button--flex button--small portfolio__button">Ver
-                                <i class="uil uil-arrow-right button__icon"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <!--==================== PORTFOLIO THIRD PROJECT ====================-->
-                    <div class="portfolio__content swiper-slide">
-                        <img src="assets/img/portfolio3.jpg" alt="" class="portfolio__img">
-
-                        <div class="portfolio__data">
-                            <h3 class="portfolio__title">Y-Commerce</h3>
-                            <p class="portfolio__description">Es un H-Commerce</p>
-                            <a href="#" class="button button--flex button--small portfolio__button">Ver
-                                <i class="uil uil-arrow-right button__icon"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Add Arrows -->
-                <div class="swiper-button-next">
-                    <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
-                </div>
-                <div class="swiper-button-prev">
-                    <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
-                </div>
-
-                <!-- Add Pagination -->
-                <div class="swiper-pagination"></div>
-
-            </div>
-
-        </section>
-
-        <!--==================== SERVICES ====================-->
-        <section class="services section" id="services">
-            <h2 class="section__title" id="section__title__services-lg">Services</h2>
-            <!--<span class="section__subtitle"></span>-->
-
-            <div class="services__container container grid">
-                <!--==================== SERVICE FRONT ====================-->
-                <div class="services__content">
-                    <div>
-                        <i class="uil uil-arrow services__icon services__front-button"></i>
-                        <h3 class="services__title" id="section__title__services-front-lg"> Front End Developer </h3>
-                    </div>
-                    <span class="button button--flex button--small button--link services__button">
-                        <span id="service__front">View more</span>
-                        <!--<i class="uil uil-arrow-right button__icon"></i>-->
-                    </span>
-                    <div class="services__modal" id="service__front-modal">
-                        <div class="services__modal-content">
-                            <h4 class="services__modal-title" id="services__modal-title-lg"> Front End Developer </h4>
-                            <i class="uil uil-times services__modal-close" id="service__front-close"></i>
-
-                            <ul class="services__modal-services grid">
-                                <li class="services__modal-services">
-                                    <!--<i class="uil uil-check-circle services__modal-icon"></i>-->
-                                    <p id="services__modal-services-front-lg1">-Program your web page from the
-                                        beginning.
-                                    </p>
-                                </li>
-                                <li class="services__modal-services">
-                                    <!--<i class="uil uil-check-circle services__modal-icon"></i>-->
-                                    <p id="services__modal-services-front-lg2">-Optimice the user interface to make it
-                                        more
-                                        intuitive.
-                                    </p>
-                                </li>
-                                <li class="services__modal-services">
-                                    <!--<i class="uil uil-check-circle services__modal-icon"></i>-->
-                                    <p id="services__modal-services-front-lg3">-Recreate visual element interactions to
-                                        get a
-                                        better user experience.
-                                    </p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!--==================== SERVICE BACK ====================-->
-                <!--<div class="services__content">
-                    <div>
-                        <i class="uil uil-pen services__icon"></i>
-                        <h3 class="services__title"> Back End <br> Developer </h3>
-                    </div>
-                    <span class="button button--flex button--small button--link services__button">View more
-                        <i class="uil uil-arrow-right button__icon"></i>
-                    </span>
-                    <div class="services__modal">
-                        <div class="services__modal-content">
-                            <h4 class="services__modal-title"> Back End <br> Developer </h4>
-                            <i class="uil uil-times services__modal-close"></i>
-
-                            <ul class="services__modal-services grid">
-                                <li class="services__modal-services">
-                                    <i class="uil uil-check-circle services__modal-icon"></i>
-                                    <p>-Upload and maintain your web page.
-                                    </p>
-                                </li>
-                                <li class="services__modal-services">
-                                    <i class="uil uil-check-circle services__modal-icon"></i>
-                                    <p>-Recreate and deliver the response of your forms to multiple directions.
-                                    </p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>-->
-                <!--==================== SERVICE DESIGN ====================-->
-                <div class="services__content">
-                    <div>
-                        <i class="uil uil-web-grid services__icon"></i>
-                        <h3 class="services__title uxui">UI/UX</h3>
-                    </div>
-                    <span class="button button--flex button--small button--link services__button">
-                        <span id="service__design">View more</span>
-                        <!--<i class="uil uil-arrow-right button__icon service__design-arrow"></i>-->
-                    </span>
-                    <div class="services__modal" id="service__design-modal">
-                        <div class="services__modal-content">
-                            <h4 class="services__modal-title">UI/UX</h4>
-                            <i class="uil uil-times services__modal-close" id="service__design-close"></i>
-
-                            <ul class="services__modal-services grid">
-                                <li class="services__modal-services">
-                                    <!--<i class="uil uil-check-circle services__modal-icon"></i>-->
-                                    <p id="services__modal-services-design-lg1">-Diagram the web page design.
-                                    </p>
-                                </li>
-                                <li class="services__modal-services">
-                                    <!--<i class="uil uil-check-circle services__modal-icon"></i>-->
-                                    <p id="services__modal-services-design-lg2">-Optimize the user interface.
-                                    </p>
-                                </li>
-                                <li class="services__modal-services">
-                                    <!--<i class="uil uil-check-circle services__modal-icon"></i>-->
-                                    <p id="services__modal-services-design-lg3">-Recreate UX element interactions.
-                                    </p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <!--==================== CONTACT ====================-->
         <section class="contact section" id="contact">
             <h2 class="section__title" id="section__title__contact-lg">Contact Me</h2>
-            <span class="section__subtitle" id="section__subtitle__contact-lg">Get in touch</span>
+            <!--<span class="section__subtitle" id="section__subtitle__contact-lg">Get in touch</span>-->
 
-            <div class="contact__container container grid">
+            <div class="contact__container container">
 
                 <form type="form" action="https://formspree.io/f/mpzbovge" method="POST" class="contact__form grid"
                     id="contact__form">
@@ -666,7 +565,8 @@
 
                 <div class="contact__container__information">
 
-                    <a href="mailto:gimernahuel.work@gmail.com" class="contact__information">
+                    <a href="mailto:gimernahuel.work@gmail.com" class="contact__information"
+                        id="contact__information-email">
                         <i class="fa-solid fa-envelope contact__icon"></i>
                         <div>
                             <span class="contact__title">Email</span>
@@ -674,7 +574,8 @@
                         </div>
                     </a>
 
-                    <a href="https://wa.me/5491126101998" class="contact__information">
+                    <a href="https://wa.me/5491126101998" class="contact__information"
+                        id="contact__information-whatsapp">
                         <i class="fa-brands fa-whatsapp contact__icon"></i>
                         <div>
                             <span class="contact__title">WhatsApp</span>
@@ -682,7 +583,8 @@
                         </div>
                     </a>
 
-                    <a href="https://www.linkedin.com/in/nahuelgimer/" class="contact__information">
+                    <a href="https://www.linkedin.com/in/nahuelgimer/" class="contact__information"
+                        id="contact__information-linkedin">
                         <i class="fa-brands fa-linkedin-in contact__icon"></i>
                         <div>
                             <span class="contact__title">LinkedIn</span>
@@ -691,7 +593,8 @@
                     </a>
 
 
-                    <a href="https://github.com/NahuelGimer" class="contact__information">
+                    <a href="https://github.com/NahuelGimer" class="contact__information"
+                        id="contact__information-github">
                         <i class="fa-brands fa-github contact__icon"></i>
                         <div>
                             <span class="contact__title">GitHub</span>
@@ -724,7 +627,7 @@
                         <a href="#contact" class="footer__link">Contact</a>
                     </li>
                 </ul>
-                <!-- <div class="footer__socials">
+                 <div class="footer__socials">
                     <a href="" class="footer__social">
                        
                     </a>
@@ -747,6 +650,10 @@
     </a>-->
 
     <!--==================== OVERLAY ====================-->
+
+    <!--==================== TILT JS ====================-->
+
+    <script type="text/javascript" src="assets/js/vanilla-tilt.js"></script>
 
     <!--==================== SWIPER JS ====================-->
     <script src="assets/js/swiper-bundle.min.js"></script>

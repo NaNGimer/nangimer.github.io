@@ -1,3 +1,10 @@
+/*==================== TILT HOME IMAGE ====================*/
+
+VanillaTilt.init(document.querySelector('.home__img'), {
+	max: 25,
+	speed: 400,
+});
+
 /*==================== MENU SHOW Y HIDDEN ====================*/
 
 let navToggleOpen = false;
@@ -35,9 +42,11 @@ document.getElementById('nav__link__skills-mobile').addEventListener('click', ()
 document.getElementById('nav__link__portfolio-mobile').addEventListener('click', () => {
 	navToggle();
 });
+/*
 document.getElementById('nav__link__services-mobile').addEventListener('click', () => {
 	navToggle();
 });
+*/
 document.getElementById('nav__link__contact-mobile').addEventListener('click', () => {
 	navToggle();
 });
@@ -65,27 +74,30 @@ function navLanguage() {
 		document.getElementById('about-lg-mobile').innerText = 'Acerca de Mi';
 		document.getElementById('skills-lg-mobile').innerText = 'Habilidades';
 		document.getElementById('portfolio-lg-mobile').innerText = 'Portafolio';
+		/*
 		document.getElementById('services-lg-mobile').innerText = 'Servicios';
+		*/
 		document.getElementById('contact-lg-mobile').innerText = 'Contáctame';
 		document.getElementById('home-lg-desk').innerText = 'Inicio';
 		document.getElementById('about-lg-desk').innerText = 'Acerca de Mi';
 		document.getElementById('skills-lg-desk').innerText = 'Habilidades';
 		document.getElementById('portfolio-lg-desk').innerText = 'Portafolio';
+		/*
 		document.getElementById('services-lg-desk').innerText = 'Servicios';
+		*/
 		document.getElementById('contact-lg-desk').innerText = 'Contáctame';
 
 		/*==================== HOME ====================*/
 		document.getElementById('home__subtitle-lg').innerText = 'Desarrollador Front End, UX/UI';
-		document.getElementById('home__description-lg1').innerText =
+		/*document.getElementById('home__description-lg1').innerText =
 			'Enfocado en conocer la impresión del cliente';
 		document.getElementById('home__description-lg2').innerText =
 			'dentro de la web, para aportar al desarrollo';
 		document.getElementById('home__description-lg3').innerText =
-			'desde una mejor experiencia de usuario.';
+			'desde una mejor experiencia de usuario.';*/
 
 		/*==================== ABOUT ====================*/
 		document.getElementById('section__title__about-lg').innerText = 'Acerca de Mi';
-		document.getElementById('about__description-lg').innerText = 'Un crack';
 		document.getElementById('about__buttons-lg1').innerText = 'Descargar';
 
 		/*==================== SKILLS ====================*/
@@ -93,15 +105,16 @@ function navLanguage() {
 
 		/*==================== PORTFOLIO ====================*/
 		document.getElementById('section__title__portfolio-lg').innerText = 'Portafolio';
-		document.getElementById('section__subtitle__portfolio-lg').innerText = 'Trabajos recientes';
+		/*document.getElementById('section__subtitle__portfolio-lg').innerText = 'Trabajos recientes';*/
 		document.getElementById('portfolio__container-lg-en').classList.remove('show-pf');
 		document.getElementById('portfolio__container-lg-es').classList.add('show-pf');
 
 		/*==================== SERVICES ====================*/
+		/*
 		document.getElementById('section__title__services-lg').innerText = 'Servicios';
-		document.getElementById('section__title__services-front-lg').innerText = 'Desarrollador Front End';
+		document.getElementById('section__title__services-web-lg').innerText = 'Desarrollador Web';
 		document.getElementById('service__front').innerText = 'Ver más';
-		document.getElementById('services__modal-title-lg').innerText = 'Desarrollador Front End';
+		document.getElementById('services__modal-title-lg').innerText = 'Desarrollador Web';
 		document.getElementById('services__modal-services-front-lg1').innerText =
 			'-Programar su página web desde el inicio.';
 		document.getElementById('services__modal-services-front-lg2').innerText =
@@ -115,10 +128,12 @@ function navLanguage() {
 			'-Optimizar su interfaz para lograr que sea más intuitiva.';
 		document.getElementById('services__modal-services-design-lg3').innerText =
 			'-Recrear la relación de sus elementos visuales para mejorar la experiencia de usuario.';
-
+		*/
 		/*==================== CONTACT ====================*/
 		document.getElementById('section__title__contact-lg').innerText = 'Contáctame';
+		/*
 		document.getElementById('section__subtitle__contact-lg').innerText = 'Envíame un mensaje';
+		*/
 		document.getElementById('contact__name-lg').innerText = 'Nombre/Empresa';
 		document.getElementById('contact__message-lg').innerText = 'Mensaje';
 		document.getElementById('contact__submit-lg').innerText = 'Envíar';
@@ -141,24 +156,27 @@ function navLanguage() {
 		document.getElementById('about-lg-mobile').innerText = 'About Me';
 		document.getElementById('skills-lg-mobile').innerText = 'Skills';
 		document.getElementById('portfolio-lg-mobile').innerText = 'Portfolio';
+		/*
 		document.getElementById('services-lg-mobile').innerText = 'Services';
+		*/
 		document.getElementById('contact-lg-mobile').innerText = 'Contact Me';
 		document.getElementById('home-lg-desk').innerText = 'Home';
 		document.getElementById('about-lg-desk').innerText = 'About Me';
 		document.getElementById('skills-lg-desk').innerText = 'Skills';
 		document.getElementById('portfolio-lg-desk').innerText = 'Portfolio';
+		/*
 		document.getElementById('services-lg-desk').innerText = 'Services';
+		*/
 		document.getElementById('contact-lg-desk').innerText = 'Contact Me';
 
 		/*==================== HOME ====================*/
 		document.getElementById('home__subtitle-lg').innerText = 'Front End Developer, UX/UI';
-		document.getElementById('home__description-lg1').innerText = 'Focused in learn the impression';
+		/*document.getElementById('home__description-lg1').innerText = 'Focused in learn the impression';
 		document.getElementById('home__description-lg2').innerText = 'of the client inside the web,';
-		document.getElementById('home__description-lg3').innerText = 'to enhance their user experience.';
+		document.getElementById('home__description-lg3').innerText = 'to enhance their user experience.';*/
 
 		/*==================== ABOUT ====================*/
 		document.getElementById('section__title__about-lg').innerText = 'About Me';
-		document.getElementById('about__description-lg').innerText = 'A crack';
 		document.getElementById('about__buttons-lg1').innerText = 'Download';
 
 		/*==================== SKILLS ====================*/
@@ -167,15 +185,17 @@ function navLanguage() {
 		/*==================== PORTFOLIO ====================*/
 
 		document.getElementById('section__title__portfolio-lg').innerText = 'Portfolio';
-		document.getElementById('section__subtitle__portfolio-lg').innerText = 'Recent work';
+		/*document.getElementById('section__subtitle__portfolio-lg').innerText = 'Recent work';*/
 		document.getElementById('portfolio__container-lg-es').classList.remove('show-pf');
 		document.getElementById('portfolio__container-lg-en').classList.add('show-pf');
 
 		/*==================== SERVICES ====================*/
+
+		/*
 		document.getElementById('section__title__services-lg').innerText = 'Services';
-		document.getElementById('section__title__services-front-lg').innerText = 'Front End Developer';
+		document.getElementById('section__title__services-web-lg').innerText = 'Web Developer';
 		document.getElementById('service__front').innerText = 'View more';
-		document.getElementById('services__modal-title-lg').innerText = 'Front End Developer';
+		document.getElementById('services__modal-title-lg').innerText = 'Web Developer';
 		document.getElementById('services__modal-services-front-lg1').innerText =
 			'-Program your web page from the beginning.';
 		document.getElementById('services__modal-services-front-lg2').innerText =
@@ -189,10 +209,13 @@ function navLanguage() {
 			'-Optimize the user interface.';
 		document.getElementById('services__modal-services-design-lg3').innerText =
 			'-Recreate UX element interactions.';
+	*/
 
 		/*==================== CONTACT ====================*/
 		document.getElementById('section__title__contact-lg').innerText = 'Contact Me';
+		/*
 		document.getElementById('section__subtitle__contact-lg').innerText = 'Get in touch';
+		*/
 		document.getElementById('contact__name-lg').innerText = 'Name';
 		document.getElementById('contact__message-lg').innerText = 'Message';
 		document.getElementById('contact__submit-lg').innerText = 'Send';
@@ -220,6 +243,28 @@ function navTheme() {
 		document.getElementById('theme-button').classList.remove('uil-moon');
 	}
 }
+
+/*==================== PORTFOLIO SWIPER  ====================*/
+
+var swiper = new Swiper('.swiper', {
+	slidesPerView: 1,
+	centeredSlides: true,
+	spaceBetween: 30,
+	speed: 700,
+	loop: true,
+	autoplay: {
+		delay: 4500,
+		disableOnInteraction: false,
+	},
+	pagination: {
+		el: '.swiper-pagination',
+		clickable: true,
+	},
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
+	},
+});
 
 /*==================== ACCORDION SKILLS ====================*/
 
@@ -289,6 +334,7 @@ function skills__design() {
 
 /*==================== SERVICES MODAL ====================*/
 
+/*
 const layout = document.querySelectorAll('.services__modal');
 
 document.getElementById('service__front').addEventListener('click', () => {
@@ -322,28 +368,7 @@ document.getElementById('service__design-close').addEventListener('click', () =>
 	document.getElementById('service__design-modal').classList.remove('services-on');
 	document.getElementById('service__design-modal').classList.add('services-off');
 });
-
-/*==================== PORTFOLIO SWIPER  ====================*/
-
-var swiper = new Swiper('.swiper', {
-	slidesPerView: 1,
-	centeredSlides: true,
-	spaceBetween: 30,
-	speed: 700,
-	loop: true,
-	autoplay: {
-		delay: 904500,
-		disableOnInteraction: false,
-	},
-	pagination: {
-		el: '.swiper-pagination',
-		clickable: true,
-	},
-	navigation: {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev',
-	},
-});
+*/
 
 /*==================== TESTIMONIAL ====================*/
 
@@ -356,7 +381,7 @@ function scrollActive() {
 
 	sections.forEach((current) => {
 		const sectionHeight = current.offsetHeight;
-		const sectionTop = current.offsetTop - 200;
+		const sectionTop = current.offsetTop - 300;
 		sectionId = current.getAttribute('id');
 
 		if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
@@ -508,6 +533,28 @@ function contactInputMessage() {
 	}
 	document.querySelector('#contact__message__container').addEventListener('mouseleave', messageCheck);
 }
+
+/*==================== TILT CONTACT ====================*/
+
+VanillaTilt.init(document.querySelector('#contact__information-email'), {
+	max: 25,
+	speed: 400,
+});
+
+VanillaTilt.init(document.querySelector('#contact__information-whatsapp'), {
+	max: 25,
+	speed: 400,
+});
+
+VanillaTilt.init(document.querySelector('#contact__information-linkedin'), {
+	max: 25,
+	speed: 400,
+});
+
+VanillaTilt.init(document.querySelector('#contact__information-github'), {
+	max: 25,
+	speed: 400,
+});
 
 /*
 const contactFormName = document.getElementById('name');
