@@ -1,0 +1,10 @@
+https://the-simplefolio.netlify.app/#about
+
+Hello, my name is Nahuel Gimer.
+
+This is my portfolio.
+
+*borrar botón scroll, programar bajada elegante con react*
+
+*Borrar botón contact y background verde, agregar botones de contacto blanco y negro*
+
