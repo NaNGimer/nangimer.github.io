@@ -564,7 +564,7 @@ ScrollReveal({
 
 /*==================== HOME ====================*/
 
-ScrollReveal().reveal('.home__img', {distance: '0px', duration: 850, delay: 40, scale: 0.1});
+ScrollReveal().reveal('.home__img', {distance: '0px', duration: 850, delay: 0, scale: 0.1});
 ScrollReveal().reveal('.home__title', {
 	distance: '235px',
 	duration: 700,
