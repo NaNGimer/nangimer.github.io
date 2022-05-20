@@ -1,0 +1,9 @@
+Portfolio mejoras:
+
+- En la sección de "servicios" agregar muestras visuales al hacer click de "ver más". Ejemplo: si dice que podes crear los elementos visuales, mostrar un ejemplo de un botón con efecto visual recreado.
+
+- poner el "efecto fluido" en la barra de navegación movil.
+
+- Recrear el logo "hamburguesa" en la barra de navegación movil.
+
+- height variable en efectos de "skills"
